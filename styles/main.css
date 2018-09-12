@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh; }
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.container {
+  max-width: 90%;
+  height: 100%;
+  left: 5%;
+  position: relative; }
+
+.content-bg {
+  background-color: rgba(153, 153, 153, 0.5);
+  height: 100%;
+  flex: 1 1 auto; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #000; }
+
+.page-text {
+  padding: 10px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.header-primary {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700; }
+
+.header {
+  background-image: linear-gradient(rgba(226, 174, 122, 0.8), rgba(226, 174, 122, 0.8)), url(../logoback.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  flex: 0 0 15vh;
+  max-height: 15vh; }
+  .header__logo-box, .header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    height: 100%; }
+  .header__logo {
+    background-size: cover;
+    padding-bottom: 1px; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.navigation {
+  background-image: url(../plitka.jpg);
+  flex: 0 0 4rem;
+  border-top: 1px solid #94643f;
+  border-bottom: 1px solid #94643f;
+  max-height: 4rem; }
+  .navigation--overlay {
+    background-color: rgba(226, 174, 122, 0.8);
+    height: 100%; }
+  .navigation__list {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    outline: none;
+    border-left: 1px solid #94643f;
+    flex: 1 1 auto;
+    padding: 1rem; }
+    .navigation__link:link:hover, .navigation__link:link:active, .navigation__link:visited:hover, .navigation__link:visited:active {
+      background-position: 100%;
+      background-color: #b88859; }
+    .navigation__link:link:first-of-type, .navigation__link:visited:first-of-type {
+      border-left: none; }
+  .navigation .active {
+    background-color: #b88859;
+    text-decoration: underline; }
+
+.footer {
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(226, 174, 122, 0.8), rgba(226, 174, 122, 0.8)), url(../plitka.jpg);
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  flex: 0 0 auto;
+  bottom: 0;
+  border-top: 1px solid #94643f; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  height: 100%; }
+
+.price-box {
+  display: flex; }
+  .price-box > * {
+    display: inline-block; }
+  .price-box__menu {
+    flex: 0 0 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    border-right: 2px solid #94643f; }
+  .price-box__link:link, .price-box__link:visited {
+    flex: 0 0 4rem;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    outline: none; }
+    .price-box__link:link:hover, .price-box__link:link:active, .price-box__link:visited:hover, .price-box__link:visited:active {
+      background-position: 100%;
+      color: #fff; }
+  .price-box__content {
+    flex: 1 0 auto;
+    border: 1px solid #94643f;
+    border-left: none; }
+
+.whatsapp-link {
+  display: block;
+  text-decoration: none;
+  color: #000; }
+  .whatsapp-link img {
+    height: 1.7rem; }
+
+.phone-link {
+  display: block;
+  text-decoration: none;
+  color: #000; }
+  .phone-link img {
+    height: 1.7rem; }
+
+.gallery-card {
+  margin: 5px;
+  height: 12rem;
+  width: 16rem;
+  position: relative;
+  font-weight: 700;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #000;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.23); }
+  .gallery-card > * {
+    position: absolute;
+    min-height: 10rem;
+    width: 100%; }
+  .gallery-card__image {
+    margin: auto;
+    height: auto; }
+  .gallery-card__description {
+    opacity: 0;
+    background-color: rgba(153, 153, 153, 0.8);
+    line-height: 12rem;
+    text-align: center;
+    transition: opacity .3s ease; }
+    .gallery-card__description--text {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal; }
+  .gallery-card:hover .gallery-card__description {
+    opacity: 1;
+    transition: opacity .3s ease; }
